@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<form name="Pay" method="post" action="{{ url }}" accept-charset="UTF-8">
+  {% for field in form %}
+    {% if field.type == "SubmitField" %}
+      {{ field(class="btn btn-outline-info") }}
+    {% else %}
+      <input type="hidden" name="{{ field.name }}" value="{{ field.data }}">
+    {% endif %}
+  {% endfor %}
+</form>
+{% endblock %}
