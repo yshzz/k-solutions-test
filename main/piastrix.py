@@ -34,7 +34,7 @@ class BaseApi:
         Returns:
             :obj:`dict`: Response data.
         Raises:
-            :class:`main.piastrix.PiastrixException`: Piastrix error.
+            :class:`main.exceptions.PiastrixApiException`: Piastrix API error.
         """
 
         response_content = self._post(endpoint, body).json()
