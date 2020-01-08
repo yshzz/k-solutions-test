@@ -11,8 +11,8 @@ class BaseApi:
     """Base class for API interaction.
 
     Args:
-        shop_id (:obj:`str`): Shop ID in the Piastrix system.
         secret_key (:obj:`str`): Secret key used to sign requests.
+        base_url (:obj:`str`): API base url.
     """
 
     def __init__(self, secret_key, base_url):
